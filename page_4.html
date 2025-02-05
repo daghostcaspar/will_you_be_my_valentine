@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Confession</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #FF6F61, #FFB6C1);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      overflow: hidden;
+      margin: 0;
+      height: 100vh;
+      color: white;
+    }
+
+    .heart {
+      position: absolute;
+      animation: floatHearts 10s infinite;
+      font-size: 40px;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      50% { transform: translateY(-200px) rotate(45deg); opacity: 0.7; }
+      100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    }
+
+    .message {
+      font-size: 2rem;
+      margin-top: 10vh; /* Adjusted for larger text */
+      opacity: 0;
+      animation: textAppear 3s ease-in-out forwards;
+      line-height: 1.6; /* To give more space between lines of text */
+      padding: 0 20px; /* Add padding for larger text to fit better */
+    }
+
+    @keyframes textAppear {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .heart-icon {
+      position: absolute;
+      bottom: 20px;
+      font-size: 5rem;
+      animation: pulseHeart 1.5s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes pulseHeart {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart" style="top: 20%; left: 30%;">💖</div>
+  <div class="heart" style="top: 30%; left: 70%;">💖</div>
+  <div class="heart" style="top: 50%; left: 50%;">💖</div>
+
+  <div class="message">
+   
+    <p style="font-size: 2rem;">💖💖💖💖</p>
+    <p style="font-size: 1.8rem;"><br> I know you have taken chances before, and they left you high and dry. I know you are scared to start again after everything before this has failed you—I am, too. But if I have to fail again, it is you I want to go down in flames with. I know that nothing ever works out, but if it does, it would be this; it would be here; it would be you and me and whatever this fire is between us. 💖<br>
+      <br>I know you fight a lot of battles that you don't tell the world about. I hope one day, whenever that time comes, you will be comfortable enough to share them with me. Until then, please know that I'm here for you, a silent but unwavering support in your corner. I may not always understand the depth of what you're going through, but I can offer a listening ear and a shoulder to lean on.</br></p>
+  </div>
+
+  <div class="heart-icon" onclick="goToNextPage()">❤️</div>
+
+  <script>
+    let hearts = document.querySelectorAll('.heart');
+    hearts.forEach(heart => {
+      let speed = Math.random() * 5 + 5;
+      heart.style.animationDuration = `${speed}s`;
+    });
+
+    function goToNextPage() {
+      // You can navigate to a new page (e.g., redirect to another URL)
+      window.location.href = "page_5.html"; // Replace with your next page URL
+    }
+  </script>
+
+</body>
+</html>

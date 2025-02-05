@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Confession</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #FF6F61, #FFB6C1);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      overflow: hidden;
+      margin: 0;
+      height: 100vh;
+      color: white;
+    }
+
+    .heart {
+      position: absolute;
+      animation: floatHearts 10s infinite;
+      font-size: 40px;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      50% { transform: translateY(-200px) rotate(45deg); opacity: 0.7; }
+      100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    }
+
+    .message {
+      font-size: 2rem;
+      margin-top: 10vh; /* Adjusted for larger text */
+      opacity: 0;
+      animation: textAppear 3s ease-in-out forwards;
+      line-height: 1.6; /* To give more space between lines of text */
+      padding: 0 20px; /* Add padding for larger text to fit better */
+    }
+
+    @keyframes textAppear {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .heart-icon {
+      position: absolute;
+      bottom: 20px;
+      font-size: 5rem;
+      animation: pulseHeart 1.5s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes pulseHeart {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart" style="top: 20%; left: 30%;">💖</div>
+  <div class="heart" style="top: 30%; left: 70%;">💖</div>
+  <div class="heart" style="top: 50%; left: 50%;">💖</div>
+
+  <div class="message">
+   
+    <p style="font-size: 2rem;">💖💖💖💖</p>
+    <p style="font-size: 1.8rem;">A lot of people say so many things about their partner, like how they fell for his or her smile, or the way their eyes light up when they look at the sky, or they look so pretty that they couldn't look away, or the sound of their voice, but the truth is I never needed a reason to fall for you; it is simply a part of me.<br> 
+        Of course, I'm not saying that you don't have the prettiest smile in this universe or how I can infinitely stare into your eyes and forget about even my own existence.  The sound of your voice is the only thing I want to wake up to and go to sleep with. But I don't believe in checkboxes; I would have still fallen for you no matter what. I didn't fall for you just because you are beautiful; I didn't fall for you just because you are smart; I didn't fall for you because of what you can give me or how you make me feel. I fell for you because with you I don't just exist; I live. My world isn't just full; it's alive. 💖<br>
+    
+  </div>
+
+  <div class="heart-icon" onclick="goToNextPage()">❤️</div>
+
+  <script>
+    let hearts = document.querySelectorAll('.heart');
+    hearts.forEach(heart => {
+      let speed = Math.random() * 5 + 5;
+      heart.style.animationDuration = `${speed}s`;
+    });
+
+    function goToNextPage() {
+      // You can navigate to a new page (e.g., redirect to another URL)
+      window.location.href = "page_4.html"; // Replace with your next page URL
+    }
+  </script>
+
+</body>
+</html>

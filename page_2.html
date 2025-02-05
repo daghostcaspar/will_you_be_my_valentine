@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day - Page 3</title>
+    <style>
+        body {
+            background-color: #f8d7e2;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #e91e63;
+            overflow: hidden;
+        }
+
+        .message {
+            font-size: 25px;
+            line-height: 1.5;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+            white-space: pre-wrap;
+        }
+
+        .message.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .heart-button {
+            background-image: url("heart_010.jpg"); /* Replace with your image path */
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            text-indent: -9999px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .heart-button:hover {
+            transform: scale(1.1);
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .heart-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            /* Optional animated heart background */
+            /* background-image: url("heart_background.gif");  */
+            /* background-size: cover; */
+            /* animation: float 10s linear infinite; */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-bg"></div>
+    <div class="message" id="message">
+        Then I realized that I have never told you how I feel about you directly, at least. So I thought, why the fuck not? It's two crops with one seed. So here goes nothing, '''one two, cha cha cha, three, four, cha cha cha, I gotttttt this aaaaaaaaaaa, alright.""
+    </div>
+
+    <button class="heart-button" onclick="goToNextPage()">Next Page</button>
+
+    <script>
+        const messageDiv = document.getElementById("message");
+
+        // Trigger animation on page load
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                messageDiv.classList.add('show'); // Show message after a delay
+            }, 500); // Initial delay before animation (adjust as needed)
+        });
+
+        function goToNextPage() {
+            // Redirect to the next page or perform an action
+            window.location.href = "page_3.html";
+        }
+    </script>
+</body>
+</html>
